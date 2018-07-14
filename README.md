@@ -1,2 +1,3 @@
-# cookienotify
-Cookie notifications in material design style
+# CookieNotify - Material Design
+
+A simple, customizable [material design](https://getmdl.io/) cookie notification.
