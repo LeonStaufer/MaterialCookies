@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cookie.material.min.css">
+    <script src="cookie.min.js"></script>
+
+    <script>
+        var data = {
+            message: 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies',
+            actionText: 'Learn more',
+            actionHandler: function(event) {
+                location.href = "terms.html";
+            },
+            //actionColor: '#90caf9',
+            doneText: 'Done',
+            //doneColor: '#f48fb1',
+            delay: 1000
+        };
+
+        CookieNotify.init(data);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
+/* Dialog */
+.mdl-button {
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  color: rgb(0,0,0);
+  position: relative;
+  height: 36px;
+  margin: 0;
+  min-width: 64px;
+  padding: 0 16px;
+  display: inline-block;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle; }
+  .mdl-button::-moz-focus-inner {
+    border: 0; }
+  .mdl-button:hover {
+    background-color: rgba(158,158,158, 0.20); }
+  .mdl-button:focus:not(:active) {
+    background-color: rgba(0,0,0, 0.12); }
+  .mdl-button:active {
+    background-color: rgba(158,158,158, 0.40); }
+  .mdl-button.mdl-button--colored {
+    color: rgb(63,81,181); }
+    .mdl-button.mdl-button--colored:focus:not(:active) {
+      background-color: rgba(0,0,0, 0.12); }
+
+input.mdl-button[type="submit"] {
+  -webkit-appearance: none; }
+
+.mdl-button--raised {
+  background: rgba(158,158,158, 0.20);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .mdl-button--raised:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    background-color: rgba(158,158,158, 0.40); }
+  .mdl-button--raised:focus:not(:active) {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+    background-color: rgba(158,158,158, 0.40); }
+  .mdl-button--raised.mdl-button--colored {
+    background: rgb(63,81,181);
+    color: rgb(255,255,255); }
+    .mdl-button--raised.mdl-button--colored:hover {
+      background-color: rgb(63,81,181); }
+    .mdl-button--raised.mdl-button--colored:active {
+      background-color: rgb(63,81,181); }
+    .mdl-button--raised.mdl-button--colored:focus:not(:active) {
+      background-color: rgb(63,81,181); }
+    .mdl-button--raised.mdl-button--colored .mdl-ripple {
+      background: rgb(255,255,255); }
+
+
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
+/* Dialog */
+.mdl-snackbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  cursor: default;
+  background-color: #323232;
+  z-index: 3;
+  min-width: fit-content;
+  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  will-change: transform;
+  -webkit-transform: translate(0, 80px);
+          transform: translate(0, 80px);
+  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+  pointer-events: none; }
+  @media (max-width: 479px) {
+    .mdl-snackbar {
+      width: 100% !important;
+      left: 0;
+      min-height: 48px;
+      max-height: fit-content; } }
+  @media (min-width: 480px) {
+    .mdl-snackbar {
+      border-radius: 2px;
+      -webkit-transform: translate(-50%, 80px);
+              transform: translate(-50%, 80px); } }
+  .mdl-snackbar--active {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    pointer-events: auto;
+    transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1); }
+    @media (min-width: 480px) {
+      .mdl-snackbar--active {
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0); } }
+  .mdl-snackbar__text {
+    padding: 14px 12px 14px 24px;
+    vertical-align: middle;
+    color: white;
+    float: left; }
+  .mdl-snackbar__action {
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+    float: right;
+    text-transform: uppercase;
+    padding: 14px 6px 14px 12px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    overflow: visible;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center; }
+    .mdl-snackbar__action::-moz-focus-inner {
+      border: 0; }
+    .mdl-snackbar__action:not([aria-hidden]) {
+      opacity: 1;
+      pointer-events: auto; }
+.mdl-snackbar__done {
+    background: transparent;
+    border: none;
+    color: #ffeb3b;
+    float: right;
+    text-transform: uppercase;
+    padding: 14px 24px 14px 6px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    overflow: visible;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center; }
+    .mdl-snackbar__done::-moz-focus-inner {
+      border: 0; }
+    .mdl-snackbar__done:not([aria-hidden]) {
+      opacity: 1;
+      pointer-events: auto; }
