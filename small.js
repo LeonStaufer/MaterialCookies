@@ -7,7 +7,6 @@ var CookieNotify = {
         }
 
         if(!this.hasCookie()){
-            this.bakeCookie();
             window.addEventListener('load', function () {
                 CookieNotify.build();
                 CookieNotify.show();
@@ -556,7 +555,11 @@ MaterialCookie.prototype.displaySnackbar_ = function () {
         this.actionElement_.addEventListener('click', this.actionHandler_);
         this.setActionHidden_(false);
     }
-    this.doneElement_.addEventListener('click', this.cleanup_.bind(this));
+    this.doneElement_.addEventListener('click', function(){
+        //FIXME: this is undefined because it is within the scope of the event listener
+        this.cleanup_.bind(this);
+        CookieNotify.bakeCookie();
+    });
 
     this.textElement_.textContent = this.message_;
     this.doneElement_.innerHTML = this.doneText_;
@@ -658,13 +661,6 @@ MaterialCookie.prototype.setActionHidden_ = function (value) {
 };
 // The component registers itself. It can assume componentHandler is available
 // in the global scope.
-componentHandler.register({
-    constructor: MaterialCookie,
-    classAsString: 'MaterialCookie',
-    cssClass: 'mdl-js-cookie',
-    widget: true
-});
-
 function register(){
     componentHandler.register({
         constructor: MaterialCookie,
