@@ -18,6 +18,9 @@ Install MaterialCookies by loading the ``MaterialCookies.js`` as well as adding 
 <!-- import Big Snackbar -->   
 <link rel="stylesheet" href="path_to/BigSnackbar.css">
 <script defer src="path_to/BigSnackbar.js"></script>
+
+<!-- import MaterialCookies -->
+<script defer src="path_to/MaterialCookies.js"></script>
 ```
 
 To show the cookie notification add the following JavaScript to your page:
